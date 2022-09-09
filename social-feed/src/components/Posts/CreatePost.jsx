@@ -1,0 +1,40 @@
+
+import React, {useState} from "react";
+
+const AddPost = (props) => {
+
+    const [name, setName] = useState(' ');
+    const [post, setPost] = useState(' ');
+
+    function handleSubmit(event) {
+        event.preventDefault()
+        let newPost = {
+            name: name,
+            post: post
+        };
+        console.log(newPost);
+        props.addNewPostProperty(newPost)
+    }
+
+    return (
+        <form onSubmit={handleSubmit} className='form-grid'>
+        <div className='form-group'>
+            <label>Name</label>
+            <input type='name' className='form-control' value={name} onChange={(event) => setName(parseFloat(event.target.value))} />
+        </div>
+        <div className='form-group'>
+            <label>Post</label>
+            <input type='post' className='form-control' value={post} onChange={(event) => setPost(event.target.value)}/>
+        </div>
+        <div>
+            <button type='submit' className='btn btn-primary' style={{'margin-top': '1em'}}>Submit</button>
+        <div>
+            {/* <button type='like' className='btn btn-like' sytle={{'margin-bottom: 2em'}}>Like</button> */}
+        </div>
+            {/* <button type='dislike' className="btn btn-primary" style={{'margin-bottom: 1em'}}>Dislike</button> */}
+        </div>
+    </form>
+    )
+}
+
+export default AddPost;
