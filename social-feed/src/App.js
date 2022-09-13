@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import DisplayPosts from "./components/DisplayPosts/DisplayPosts";
-import AddPost from "./components/Posts/CreatePost";
+import CreatePost from "./components/Posts/CreatePost";
 import Post from "./components/Posts/Post";
+import NavBar from "./components/App.js";
+
 
 function App() {
   const [entries, setEntries] = useState([
@@ -16,24 +18,9 @@ function App() {
   }
 
   return (
-    <div className='container-fluid'>
-      <div className='row'>
-        <h3 style={{margin: '1em'}}>Weight
-        <small className='text-muted'>Tracker</small></h3>
-        <div className='col-md-6'>
-          <div className='border-box'>
-            <DisplayPosts parentEntries={entries} />
-          </div>
-          <div className='border-box'>
-            <CreatePost addNewPostProperty={addNewPost} />
-          </div>
-        </div>
-        <div className='col-md-6'>
-          <div className='border-box'>
-            <Post  parentPosts={entry} />
-          </div>
-        </div>
-      </div>
+    <div>
+      <
     </div>
   );
+  }
 export default App;
