@@ -1,10 +1,9 @@
 import React from 'react';
 
-const NavBar = ({name, post}) => {
+const NavBar = () => {
     return (
         <div>
-            <h1>{name}</h1>
-            <p>{post}</p>
+            Social-Feed
         </div>
     );
 };

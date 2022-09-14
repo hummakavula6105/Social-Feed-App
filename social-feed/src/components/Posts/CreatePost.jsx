@@ -3,28 +3,29 @@ import React, {useState} from "react";
 
 const AddPost = (props) => {
 
-    const [name, setName] = useState(' ');
-    const [post, setPost] = useState(' ');
+    const [name, setName] = useState('');
+    const [post, setPost] = useState('');
 
     function handleSubmit(event) {
         event.preventDefault()
         let newPost = {
             name: name,
-            post: post
+            post: post,
+            id: Math.random()
         };
         console.log(newPost);
-        props.addNewPostProperty(newPost)
+        props. addNewPost(newPost)
     }
 
     return (
         <form onSubmit={handleSubmit} className='form-grid'>
         <div className='form-group'>
             <label>Name</label>
-            <input type='name' className='form-control' value={name} onChange={(event) => setName(parseFloat(event.target.value))} />
+            <input type='text' className='form-control' value={name} onChange={(event) => setName((event.target.value))} />
         </div>
         <div className='form-group'>
             <label>Post</label>
-            <input type='post' className='form-control' value={post} onChange={(event) => setPost(event.target.value)}/>
+            <input type='text' className='form-control' value={post} onChange={(event) => setPost(event.target.value)}/>
         </div>
         <div>
             <button type='submit' className='btn btn-primary' style={{'margin-top': '1em'}}>Submit</button>
