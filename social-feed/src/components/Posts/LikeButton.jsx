@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './LikeDislikeButton.css';
 import ImagePresenter from './ImagePresenter';
-import  thumbsUp from "./assets/ThumbsUp.png"
+import  thumbsUp from "../../assets/ThumbsUp.png"
 
 
 const LikeButton = (button) => {
@@ -15,16 +15,15 @@ const LikeButton = (button) => {
             setButtonClass("inactive");
         }
 
+    }
         return(
             <div>
-                <button className={buttonClass} onClick={handleClick}>{button.message}</button>
-                <ImagePresenter image={thumbsUp} altText="Thumbs up image"/>
+                <button className={buttonClass} onClick={handleClick}>{button.message}
+                    <ImagePresenter image={thumbsUp} altText="Thumbs up image" />
+                </button>
             </div>
         )
 
     }
-   
-}
 
 export default LikeButton;
-

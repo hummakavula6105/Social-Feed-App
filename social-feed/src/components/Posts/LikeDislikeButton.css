@@ -13,9 +13,14 @@ button:hover {
 }
 
 .active{
-    background-color: teal;
+    background-color: green;
 }
 
-.inactive{
-    background-color: grey;
+/* .inactive{
+    background-color: g; 
+}*/
+
+img{
+    width: 25px;
+    height: 25px;
 }

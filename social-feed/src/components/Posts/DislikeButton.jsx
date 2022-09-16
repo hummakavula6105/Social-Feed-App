@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './LikeDislikeButton.css';
 import ImagePresenter from './ImagePresenter';
-import thumbsDown from "./assets/ThumbsDown.jpg"
+import thumbsDown from "../../assets/ThumbsDown.jpg"
 
 
 const DislikeButton = (button) => {
@@ -18,8 +18,9 @@ const DislikeButton = (button) => {
     }
         return (
             <div>
-                <button className={buttonClass} onClick={handleClick}>{button.message}</button>
+                <button className={buttonClass} onClick={handleClick}>{button.message}
                 <ImagePresenter image={thumbsDown} altText="Thumbs down image"/>
+                </button>
             </div>
         )
 }

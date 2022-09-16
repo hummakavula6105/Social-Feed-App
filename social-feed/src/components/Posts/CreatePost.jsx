@@ -14,11 +14,15 @@ const AddPost = (props) => {
             id: Math.random()
         };
         console.log(newPost);
-        props. addNewPost(newPost)
+        props.addNewPost(newPost)
     }
 
     return (
-        <form onSubmit={handleSubmit} className='form-grid'>
+        <div className='container'>
+            <div className='row'>
+                <div className='col-md-4'></div>
+                <div className='col-md-4'>
+            <form onSubmit={handleSubmit} className='form-grid'>
         <div className='form-group'>
             <label>Name</label>
             <input type='text' className='form-control' value={name} onChange={(event) => setName((event.target.value))} />
@@ -32,7 +36,11 @@ const AddPost = (props) => {
         <div>
         </div>
         </div>
-    </form>
+                </form>
+                </div>
+            <div className='col-md-4'></div>
+            </div>
+        </div>
     )
 }
 
