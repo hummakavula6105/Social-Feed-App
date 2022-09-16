@@ -1,7 +1,7 @@
 // what does the post look like. you put that here
 import React from "react";
-import LikeButton from "./components/Posts/LikeButton.jsx";
-import DislikeButton from "./components/Posts/DislikeButton";
+import LikeButton from "../../components/Posts/LikeButton.jsx";
+import DislikeButton from "../../components/Posts/DislikeButton";
 
 const Post = ({ entry }) => {
   if (entry.name === 'name') {

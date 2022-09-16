@@ -3,7 +3,7 @@ import React from 'react';
 const ImagePresenter = ({image, altText}) => {
     return ( 
         <div>
-           <img src={image} alt={altText} />
+           <img src={image} class="rounded float-left" alt={altText} />
         </div>
      );
 }
