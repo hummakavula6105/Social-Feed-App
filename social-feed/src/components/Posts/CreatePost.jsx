@@ -30,9 +30,7 @@ const AddPost = (props) => {
         <div>
             <button type='submit' className='btn btn-primary' style={{'margin-top': '1em'}}>Submit</button>
         <div>
-            {/* <button type='like' className='btn btn-like' sytle={{'margin-bottom: 2em'}}>Like</button> */}
         </div>
-            {/* <button type='dislike' className="btn btn-primary" style={{'margin-bottom: 1em'}}>Dislike</button> */}
         </div>
     </form>
     )

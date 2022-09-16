@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import DisplayPosts from "./components/DisplayPosts/DisplayPosts";
 import CreatePost from "./components/Posts/CreatePost";
-import Post from "./components/Posts/Post";
 import NavBar from "./components/DisplayPosts/NavBar";
+import LikeButton from "./components/Posts/LikeButton";
+import DislikeButton from "./components/Posts/DislikeButton";
 
 function App() {
   const [entries, setEntries] = useState([
@@ -23,8 +24,10 @@ function App() {
       <NavBar/>
       <CreatePost addNewPost = {addNewPost}/>
       <DisplayPosts parentEntries={entries}/>
-      
+      <LikeButton/>
+      <DislikeButton/>
     </div>
+
   );
 }
 export default App;
